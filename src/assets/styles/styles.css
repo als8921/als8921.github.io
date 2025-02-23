@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.sr-only{
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+} 
+
+.nav-menu{
+    background-color:#FF7710;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px 0 50px
+}
+.nav-menu__logo-container{
+  display: flex;
+  align-items: flex-end;
+}
+.nav-menu__logo{
+  font-size: 35px;
+  font-weight: 900;
+  color: black;
+}
+.nav-menu__name{
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+}
+.nav-menu__button-container{
+  display: flex; 
+  justify-content: end; 
+  list-style: none;
+}
+.nav-menu__button{
+  padding: 10px;
+  font-size: 25px;
+  text-decoration : none;
+  color: black;
+}
+
+.nav-menu__button--active{
+  font-weight: bold;
+}
+
+
+
+.profile{
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+}
+.profile__image{
+  padding: 50px; 
+  float: inline-start;
+}
+.profile__container{
+  padding: 20px; 
+}
+.profile__name{
+  font-size: 40px;
+}
+.profile__content{
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+
+
+
+.hobby-image{
+  text-align: center;
+}
+.hobby-card{
+  margin: 0 50px 0 50px;
+  background-color: rgb(255, 249, 243);
+  list-style-type: none; 
+  padding:30px 70px 30px 70px;
+}
+.hobby-card__content{
+  text-align: center;
+  font-weight: 300;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+
+.goals-header{
+  padding: 50px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+}
+.goals-section{
+  display: flex;
+  justify-content: center;
+}
+.goal-card{
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  float:left;
+  border: 2px solid #FF7710;
+}
+.goal-card__header{
+  height: 15%;
+  background-color:#FF7710;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.goal-card__content{
+  margin: 0;
+  height: 85%;
+  font-size: 20px;
+  display: flex;
+  text-align: center; 
+  align-items: center;
+  justify-content: center;
+}
