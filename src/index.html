@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Frontend Mentor | Tip calculator app</title>
+    </head>
+    <body>
+        <header class="header">
+            <img class="header__logo" src="../images/logo.svg" />
+        </header>
+
+        <main class="calculator">
+            <article class="calculator__panel calculator__panel--left">
+                <section class="calculator__input-group">
+                    <label class="calculator__label" for="bill">Bill</label>
+
+                    <section class="calculator__input-container">
+                        <img
+                            class="calculator__input-icon"
+                            src="../images/icon-dollar.svg"
+                        />
+                        <input
+                            class="calculator__input"
+                            type="number"
+                            id="bill"
+                            placeholder="0.00"
+                        />
+                    </section>
+                </section>
+
+                <section class="calculator__input-group">
+                    <label class="calculator__label">Select Tip %</label>
+                    <section class="calculator__tip-options">
+                        <button type="button" class="calculator__tip-button">
+                            5%
+                        </button>
+                        <button type="button" class="calculator__tip-button">
+                            10%
+                        </button>
+                        <button type="button" class="calculator__tip-button">
+                            15%
+                        </button>
+                        <button type="button" class="calculator__tip-button">
+                            25%
+                        </button>
+                        <button type="button" class="calculator__tip-button">
+                            50%
+                        </button>
+                        <button
+                            type="button"
+                            class="calculator__tip-button--custom"
+                        >
+                            Custom
+                        </button>
+                    </section>
+                </section>
+
+                <section class="calculator__input-group">
+                    <label class="calculator__label" for="people"
+                        >Number of People</label
+                    >
+
+                    <section class="calculator__input-container">
+                        <img
+                            class="calculator__input-icon"
+                            src="../images/icon-person.svg"
+                        />
+                        <input
+                            class="calculator__input"
+                            type="number"
+                            id="people"
+                            placeholder="1"
+                        />
+                    </section>
+                </section>
+            </article>
+
+            <aside class="calculator__panel calculator__panel--right">
+                <section class="calculator__info-container">
+                    <section class="calculator__info">
+                        <section class="calculator__info-text">
+                            <p class="calculator__info-title">Tip Amount</p>
+                            <p class="calculator__info-subtitle">/person</p>
+                        </section>
+                        <p id="tip_price" class="calculator__info-value">
+                            $0.00
+                        </p>
+                    </section>
+
+                    <section class="calculator__info">
+                        <section class="calculator__info-text">
+                            <p class="calculator__info-title">Total</p>
+                            <p class="calculator__info-subtitle">/person</p>
+                        </section>
+                        <p id="total_price" class="calculator__info-value">
+                            $0.00
+                        </p>
+                    </section>
+                </section>
+                <button class="calculator__reset-button">RESET</button>
+            </aside>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
