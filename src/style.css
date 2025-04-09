@@ -114,7 +114,7 @@ body {
     font-weight: 800;
 }
 
-.calculator__tip-button--custom {
+.calculator__custom-tip-button {
     padding: 10px;
     font-size: 16px;
     background-color: #d7d7d7;
@@ -122,6 +122,42 @@ body {
     border: none;
     border-radius: 8px;
     font-weight: 800;
+}
+
+.calculator__custom-tip-button--selected {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3ac1a7;
+    color: #d7d7d7;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+}
+
+.calculator__custom-tip-input {
+    all: unset;
+    padding-left: 8px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 800;
+    color: #256b63;
+    text-align: center;
+    appearance: textfield;
+}
+
+.calculator__custom-tip-input--selected {
+    all: unset;
+    padding-left: 8px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0d4740;
+    text-align: center;
+    appearance: textfield;
+}
+
+.calculator__custom-tip-input--selected::placeholder {
+    color: #0d4740;
 }
 
 .calculator__info-container {

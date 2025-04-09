@@ -8,9 +8,11 @@ var selectedTipButton = null;
 
 const tipButtons = document.querySelectorAll(".calculator__tip-button");
 const resetButton = document.querySelector(".calculator__reset-button");
+const customButton = document.querySelector(".calculator__custom-tip-button");
 
 const billInput = document.querySelector("#bill");
 const personInput = document.querySelector("#people");
+const customInput = document.querySelector("#custom_tip");
 
 const tipPriceOutput = document.querySelector("#tip_price");
 const totalPriceOutput = document.querySelector("#total_price");
@@ -23,6 +25,19 @@ tipButtons.forEach((tipButton) => {
         calculatePrice();
         showResult();
     });
+});
+
+customButton.addEventListener("click", () => {
+    selectCustomTipButton();
+    tipRatio = Number(customInput.value) / 100;
+    calculatePrice();
+    showResult();
+});
+
+customInput.addEventListener("input", () => {
+    tipRatio = Number(customInput.value) / 100;
+    calculatePrice();
+    showResult();
 });
 
 billInput.addEventListener("input", () => {
@@ -47,6 +62,7 @@ function reset() {
 
     billInput.value = "";
     personInput.value = "";
+    customInput.value = "";
     tipPriceOutput.textContent = "$0.00";
     totalPriceOutput.textContent = "$0.00";
     clearSelectedTipButton();
@@ -71,6 +87,8 @@ function showResult() {
 
 // 선택된 팁 버튼 초기화
 function clearSelectedTipButton() {
+    customButton.setAttribute("class", "calculator__custom-tip-button");
+    customInput.setAttribute("class", "calculator__custom-tip-input");
     if (selectedTipButton)
         selectedTipButton.setAttribute("class", "calculator__tip-button");
 }
@@ -88,4 +106,13 @@ function selectTipButton(button) {
         );
         tipRatio = Number(button.textContent.replace("%", "")) / 100;
     }
+}
+
+function selectCustomTipButton() {
+    clearSelectedTipButton();
+    customButton.setAttribute(
+        "class",
+        "calculator__custom-tip-button--selected"
+    );
+    customInput.setAttribute("class", "calculator__custom-tip-input--selected");
 }
