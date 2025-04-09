@@ -158,6 +158,7 @@ body {
 
 .calculator__custom-tip-input--selected::placeholder {
     color: #0d4740;
+    opacity: 1;
 }
 
 .calculator__info-container {
